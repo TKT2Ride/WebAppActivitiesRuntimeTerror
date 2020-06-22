@@ -17,7 +17,15 @@ namespace CTWMasterClass_WebAppActivities.Controllers
         {
             return View(viewName: "Index", model: "Hello " + inputString);
         }
-
+        public ActionResult StringLength(string inputString)
+        {
+            return View(viewName: "Index", model: "Your Name is "+inputString.Length+" letters long");
+        }
+        public ActionResult DifferenceBetweenNameAndAge(string inputName, int inputAge)
+        {
+            int abValue = Math.Abs((inputName.Length)-inputAge);
+            return View(viewName: "Index", model:"The absoluet diffenrece between the last name and your age is "+abValue);
+        }
 
     }
 }

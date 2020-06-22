@@ -1,0 +1,18 @@
+﻿@model DateTime
+@{
+    ViewBag.Title = "Index";;
+}
+<h2>Dates</h2>
+<div>
+    <form action="DateMagic" method="post">
+        <p>Enter your birthday: <input name="inputBirthday" type="date" /></p>
+        <input name="submit" type="submit" />
+    </form>
+    
+    <p>            Your birthday is: @Model
+                   You were born in @Model.Year
+                   You will be  by the next presidential election.
+    </p>
+</div>
+
+
